@@ -6,9 +6,12 @@ import Main from "./components/Main";
 const App = () => {
   return (
     <>
-      <p>App works</p>
-      <NavBar />
-      <Main />
+      <section className={styles.nav}>
+        <NavBar />
+      </section>
+      <section className={styles.content}>
+        <Main />
+      </section>
     </>
   );
 };

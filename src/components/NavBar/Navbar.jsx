@@ -1,13 +1,16 @@
 import React from "react";
+import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
 import FiltersList from "../FiltersList";
 
 const Navbar = () => {
   return (
     <>
-      <div>Navbar works</div>
-      <SearchBox />
-      <FiltersList />
+      <nav className={styles.navFlex}>
+        <h3>BREWDOG</h3>
+        <SearchBox />
+        <FiltersList />
+      </nav>
     </>
   );
 };
