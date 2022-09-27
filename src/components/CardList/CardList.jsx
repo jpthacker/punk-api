@@ -1,11 +1,13 @@
 import React from "react";
+import styles from "./CardList.module.scss";
 import Card from "../Card";
 
 const CardList = () => {
   return (
     <>
-      <div>CardList works</div>
-      <Card />
+      <section className={styles.cards}>
+        <Card />
+      </section>
     </>
   );
 };

@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+.beerCard {
+  height: 400px;
+  width: 100%;
+  border: $secondary-border;
+  background-color: $tertiary-color;
+}

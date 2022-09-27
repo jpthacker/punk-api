@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.cards {
+  max-width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 275px);
+  grid-gap: 2rem;
+  justify-content: space-between;
+  padding: 2rem;
+
+  .card {
+    height: 400px;
+    width: 275px;
+  }
+}
