@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.filterItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box {
+  height: 1.2rem;
+  width: 1.2rem;
+  border: $secondary-border;
+}

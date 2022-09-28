@@ -9,7 +9,9 @@ const Navbar = () => {
       <nav className={styles.navFlex}>
         <h3>BREWDOG</h3>
         <SearchBox />
-        <FiltersList />
+        <div className={styles.filters}>
+          <FiltersList />
+        </div>
       </nav>
     </>
   );
