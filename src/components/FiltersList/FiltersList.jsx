@@ -4,7 +4,6 @@ import FilterItem from "../FilterItem";
 const FiltersList = () => {
   return (
     <>
-      <div>FiltersList works</div>
       <FilterItem />
     </>
   );

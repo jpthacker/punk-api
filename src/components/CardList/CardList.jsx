@@ -2,14 +2,16 @@ import React from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
 
-const CardList = () => {
-  return (
-    <>
-      <section className={styles.cards}>
-        <Card />
-      </section>
-    </>
+const CardList = (props) => {
+  const { beers } = props;
+
+  const getBeersJSX = (beer) => (
+    <div className={styles.card} key={beer.id}>
+      <Card beer={beer} />
+    </div>
   );
+
+  return <section className={styles.cards}>{beers.map(getBeersJSX)}</section>;
 };
 
 export default CardList;
