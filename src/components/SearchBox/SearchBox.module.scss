@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.search {
+  background-color: $tertiary-color;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+
+  span {
+    margin-right: 0.25rem;
+  }
+
+  input {
+    background-color: $tertiary-color;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.expanded {
+  min-width: 300px;
+}

@@ -16,10 +16,17 @@ nav {
 .navFlex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-decoration: none;
-}
+  position: relative;
 
-.filters {
-  min-width: 32%;
+  .filters {
+    margin-left: auto;
+  }
+
+  .searchBox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
