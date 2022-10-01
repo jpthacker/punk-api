@@ -3,6 +3,7 @@
 .search {
   background-color: $tertiary-color;
   border-radius: 3rem;
+  width: 100%;
   padding: 0.5rem 1rem;
 
   span {
@@ -12,13 +13,12 @@
   input {
     background-color: $tertiary-color;
     font-size: 1rem;
+    width: 12rem;
+    transition: width ease-in-out 300ms;
 
     &:focus {
       outline: none;
+      width: 24rem;
     }
   }
-}
-
-.expanded {
-  min-width: 300px;
 }
