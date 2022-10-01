@@ -3,17 +3,24 @@ import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
 import FiltersList from "../FiltersList";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { isOpen, setIsOpen } = props;
+
+  const getFiltersList = isOpen ? (
+    <div className={styles.filters}>
+      <FiltersList />
+    </div>
+  ) : (
+    ""
+  );
   return (
     <>
       <nav className={styles.navFlex}>
         <h3>BREWDOG</h3>
         <div className={styles.searchBox}>
-          <SearchBox />
+          <SearchBox isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-        <div className={styles.filters}>
-          <FiltersList />
-        </div>
+        {getFiltersList}
       </nav>
     </>
   );

@@ -7,6 +7,7 @@ nav {
   color: $primary-color;
   border-bottom: $primary-border;
   top: 0;
+  position: relative;
 
   h3 {
     font-size: 2.5rem;
@@ -17,17 +18,14 @@ nav {
 .navFlex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-decoration: none;
-  position: relative;
+}
 
-  .filters {
-    margin-left: auto;
-  }
-
-  .searchBox {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+.filters {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  background-color: #fff;
+  width: 24.5rem;
 }
