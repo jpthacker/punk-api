@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./FilterItem.module.scss";
 
 const FilterItem = (props) => {
-  const { text } = props;
+  const { label } = props;
 
   return (
     <section className={styles.filterItem}>
-      <div>{text}</div>
-      <div className={styles.box}></div>
+      <label>{label}</label>
+      <input className={styles.range} type="range" min="0" step="0.2" />
     </section>
   );
 };
