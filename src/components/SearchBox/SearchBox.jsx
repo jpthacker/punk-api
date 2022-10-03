@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBox = (props) => {
-  const { isOpen, setIsOpen } = props;
+  const { isOpen, setIsOpen, setBeerName, updateBeers, searchByName } = props;
+
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
   return (
     <div className={styles.search}>
@@ -17,6 +18,10 @@ const SearchBox = (props) => {
         }}
         onBlur={() => {
           setIsOpen(!isOpen);
+        }}
+        onChange={(e) => {
+          setBeerName(e.target.value);
+          updateBeers(searchByName);
         }}
       />
     </div>

@@ -4,7 +4,7 @@ import SearchBox from "../SearchBox";
 import FiltersList from "../FiltersList";
 
 const Navbar = (props) => {
-  const { isOpen, setIsOpen } = props;
+  const { isOpen, setIsOpen, setBeerName, updateBeers, searchByName } = props;
 
   const getFiltersList = isOpen ? (
     <div className={styles.filters}>
@@ -18,7 +18,13 @@ const Navbar = (props) => {
       <nav className={styles.navFlex}>
         <h3>BREWDOG</h3>
         <div className={styles.searchBox}>
-          <SearchBox isOpen={isOpen} setIsOpen={setIsOpen} />
+          <SearchBox
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            setBeerName={setBeerName}
+            updateBeers={updateBeers}
+            searchByName={searchByName}
+          />
         </div>
         {getFiltersList}
       </nav>
