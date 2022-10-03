@@ -8,8 +8,14 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [beers, setBeers] = useState([]);
   const [beerName, setBeerName] = useState();
+  const [minABV, setMinABV] = useState(0);
+  const [maxABV, setMaxABV] = useState(100);
 
   const searchByName = beerName ? `&beer_name=${beerName}` : "";
+  const searchByMinABV = `&abv_gt=${minABV}`;
+  const searchByMaxABV = `&abv_lt=${maxABV}`;
+
+  const searchBeers = `${searchByName}${searchByMinABV}${searchByMaxABV}`;
 
   const updateBeers = async (searchParams) => {
     const apiBeers = await getBeers(searchParams);
@@ -17,7 +23,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    updateBeers(searchByName);
+    updateBeers(searchBeers);
   }, []);
 
   return (
@@ -27,8 +33,12 @@ const App = () => {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           setBeerName={setBeerName}
+          minABV={minABV}
+          maxABV={maxABV}
+          setMinABV={setMinABV}
+          setMaxABV={setMaxABV}
           updateBeers={updateBeers}
-          searchByName={searchByName}
+          searchBeers={searchBeers}
         />
       </section>
       <section className={styles.content}>

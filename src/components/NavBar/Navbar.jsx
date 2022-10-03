@@ -4,15 +4,25 @@ import SearchBox from "../SearchBox";
 import FiltersList from "../FiltersList";
 
 const Navbar = (props) => {
-  const { isOpen, setIsOpen, setBeerName, updateBeers, searchByName } = props;
+  const {
+    isOpen,
+    setIsOpen,
+    setBeerName,
+    minABV,
+    maxABV,
+    setMinABV,
+    setMaxABV,
+    updateBeers,
+    searchBeers,
+  } = props;
 
-  const getFiltersList = isOpen ? (
-    <div className={styles.filters}>
-      <FiltersList />
-    </div>
-  ) : (
-    ""
-  );
+  // const getFiltersList = isOpen ? (
+  //   <div className={styles.filters}>
+  //     <FiltersList />
+  //   </div>
+  // ) : (
+  //   ""
+  // );
   return (
     <>
       <nav className={styles.navFlex}>
@@ -23,10 +33,20 @@ const Navbar = (props) => {
             setIsOpen={setIsOpen}
             setBeerName={setBeerName}
             updateBeers={updateBeers}
-            searchByName={searchByName}
+            searchByName={searchBeers}
           />
         </div>
-        {getFiltersList}
+        {/* {getFiltersList} */}
+        <div className={styles.filters}>
+          <FiltersList
+            minABV={minABV}
+            maxABV={maxABV}
+            setMinABV={setMinABV}
+            setMaxABV={setMaxABV}
+            updateBeers={updateBeers}
+            searchBeers={searchBeers}
+          />
+        </div>
       </nav>
     </>
   );

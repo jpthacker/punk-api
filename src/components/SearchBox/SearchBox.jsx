@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBox = (props) => {
-  const { isOpen, setIsOpen, setBeerName, updateBeers, searchByName } = props;
+  const { isOpen, setIsOpen, setBeerName, updateBeers, searchBeers } = props;
 
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
   return (
@@ -21,7 +21,8 @@ const SearchBox = (props) => {
         }}
         onChange={(e) => {
           setBeerName(e.target.value);
-          updateBeers(searchByName);
+          console.log(e.target.value);
+          updateBeers(searchBeers);
         }}
       />
     </div>
