@@ -44,10 +44,10 @@ const SearchBox = (props) => {
         placeholder="Search..."
         onChange={(e) => {
           setBeerName(e.target.value);
-          console.log(e.target.value);
+          console.log(updateBeers(searchBeers));
           updateBeers(searchBeers);
         }}
-        onClick={(e) => {
+        onFocus={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}

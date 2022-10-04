@@ -21,13 +21,13 @@ const Navbar = (props) => {
         <h3>BREWDOG</h3>
         <div className={styles.searchBox}>
           <SearchBox
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            setBeerName={setBeerName}
             minABV={minABV}
             maxABV={maxABV}
             setMinABV={setMinABV}
             setMaxABV={setMaxABV}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            setBeerName={setBeerName}
             updateBeers={updateBeers}
             searchByName={searchBeers}
           />

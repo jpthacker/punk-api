@@ -11,20 +11,21 @@ const App = () => {
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
 
-  const searchByName = beerName ? `&beer_name=${beerName}` : "";
+  const searchByName = beerName ? `beer_name=${beerName}` : "";
   const searchByMinABV = `&abv_gt=${minABV}`;
   const searchByMaxABV = `&abv_lt=${maxABV}`;
 
   const searchBeers = `${searchByName}${searchByMinABV}${searchByMaxABV}`;
 
   const updateBeers = async (searchParams) => {
+    console.log(searchParams);
     const apiBeers = await getBeers(searchParams);
     setBeers(apiBeers);
   };
 
   useEffect(() => {
     updateBeers(searchBeers);
-  }, []);
+  }, [beerName, minABV, maxABV]);
 
   return (
     <>
