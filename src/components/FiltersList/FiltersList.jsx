@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./FiltersList.module.scss";
-import FilterItem from "../FilterItem";
 
 const FiltersList = (props) => {
   const {
@@ -17,19 +16,31 @@ const FiltersList = (props) => {
   return (
     <section className={styles.filtersList}>
       <h4>FILTERS</h4>
-      <FilterItem
-        label="Min ABV"
-        ABV={minABV}
-        setABV={setMinABV}
-        updateBeers={updateBeers}
-        searchBeers={searchBeers}
+      <label>Min ABV%</label>
+      <input
+        className={styles.range}
+        type="range"
+        min="0"
+        max={maxABV}
+        step="0.1"
+        value={minABV}
+        onInput={(e) => {
+          setMinABV(e.target.value);
+          updateBeers(searchBeers);
+        }}
       />
-      <FilterItem
-        label="Max ABV"
-        ABV={maxABV}
-        setABV={setMaxABV}
-        updateBeers={updateBeers}
-        searchBeers={searchBeers}
+      <label>Max ABV%</label>
+      <input
+        className={styles.range}
+        type="range"
+        min={minABV}
+        max="55"
+        step="0.1"
+        value={maxABV}
+        onInput={(e) => {
+          setMaxABV(e.target.value);
+          updateBeers(searchBeers);
+        }}
       />
       <button
         onClick={(e) => {
@@ -37,7 +48,7 @@ const FiltersList = (props) => {
           setIsOpen(!isOpen);
         }}
       >
-        Search
+        Done
       </button>
     </section>
   );

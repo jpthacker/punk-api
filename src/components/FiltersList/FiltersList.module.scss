@@ -13,4 +13,10 @@
     font-family: $secondary-text;
     font-size: 2rem;
   }
+
+  .filterItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
