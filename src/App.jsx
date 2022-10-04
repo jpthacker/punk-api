@@ -42,7 +42,7 @@ const App = () => {
         />
       </section>
       <section className={styles.content}>
-        <Main beers={beers} isOpen={isOpen} />
+        <Main beers={beers} isOpen={isOpen} setIsOpen={setIsOpen} />
       </section>
     </>
   );

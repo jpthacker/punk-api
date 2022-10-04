@@ -3,8 +3,16 @@ import styles from "./FiltersList.module.scss";
 import FilterItem from "../FilterItem";
 
 const FiltersList = (props) => {
-  const { minABV, maxABV, setMinABV, setMaxABV, updateBeers, searchBeers } =
-    props;
+  const {
+    isOpen,
+    setIsOpen,
+    minABV,
+    maxABV,
+    setMinABV,
+    setMaxABV,
+    updateBeers,
+    searchBeers,
+  } = props;
 
   return (
     <section className={styles.filtersList}>
@@ -23,6 +31,14 @@ const FiltersList = (props) => {
         updateBeers={updateBeers}
         searchBeers={searchBeers}
       />
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+        }}
+      >
+        Search
+      </button>
     </section>
   );
 };

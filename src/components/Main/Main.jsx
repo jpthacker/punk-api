@@ -3,7 +3,7 @@ import styles from "./Main.module.scss";
 import CardList from "../CardList";
 
 const Main = (props) => {
-  const { beers, isOpen } = props;
+  const { beers, isOpen, setIsOpen } = props;
 
   const getOverlay = isOpen ? <div className={styles.overlay}></div> : "";
 
@@ -18,3 +18,5 @@ const Main = (props) => {
 };
 
 export default Main;
+
+// onClick={setIsOpen(!isOpen)}

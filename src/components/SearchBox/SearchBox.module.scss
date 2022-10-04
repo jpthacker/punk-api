@@ -3,8 +3,13 @@
 .search {
   background-color: $tertiary-color;
   border-radius: 3rem;
-  width: 100%;
+  width: 14rem;
   padding: 0.5rem 1rem;
+  transition: width ease-in-out 300ms;
+
+  &:focus-within {
+    width: 21rem;
+  }
 
   span {
     margin-right: 0.5rem;
@@ -13,12 +18,17 @@
   input {
     background-color: $tertiary-color;
     font-size: 1rem;
-    width: 12rem;
-    transition: width ease-in-out 300ms;
-
-    &:focus {
-      outline: none;
-      width: 21rem;
-    }
+    width: 80%;
+    outline: none;
   }
+}
+
+.filters {
+  position: absolute;
+  top: 4.8rem;
+  right: 2rem;
+  background-color: #fff;
+  width: 24.5rem;
+  animation: fadeIn;
+  animation-duration: 0.1s;
 }
