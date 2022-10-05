@@ -1,16 +1,17 @@
 @import "../../variables.scss";
 
 .cards {
+  margin: 0 auto;
   max-width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 320px);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 20vw);
+  grid-gap: 0.6rem;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 0;
 
   .card {
-    height: 960px;
-    width: 320px;
+    height: 640px;
+    width: 20vw;
   }
 }

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "../src/assets/fonts/Heading-Pro-ExtraBold-trial.ttf";
+import "../src/assets/fonts/heading-pro-5.ttf";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

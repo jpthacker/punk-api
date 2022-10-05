@@ -12,6 +12,7 @@ const Card = (props) => {
         <h2>{name.toUpperCase()}</h2>
         <h4>{tagline.toUpperCase()}</h4>
         <h4 className={styles.abv}>{abv}% ABV</h4>
+        {/* <button></button> */}
       </section>
     </>
   );

@@ -29,21 +29,23 @@ const App = () => {
 
   return (
     <>
-      <section className={styles.nav}>
-        <NavBar
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          setBeerName={setBeerName}
-          minABV={minABV}
-          maxABV={maxABV}
-          setMinABV={setMinABV}
-          setMaxABV={setMaxABV}
-          updateBeers={updateBeers}
-          searchBeers={searchBeers}
-        />
-      </section>
       <section className={styles.content}>
-        <Main beers={beers} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <section className={styles.nav}>
+          <NavBar
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            setBeerName={setBeerName}
+            minABV={minABV}
+            maxABV={maxABV}
+            setMinABV={setMinABV}
+            setMaxABV={setMaxABV}
+            updateBeers={updateBeers}
+            searchBeers={searchBeers}
+          />
+        </section>
+        <section className={styles.cards}>
+          <Main beers={beers} isOpen={isOpen} />
+        </section>
       </section>
     </>
   );

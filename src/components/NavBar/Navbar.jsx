@@ -19,20 +19,22 @@ const Navbar = (props) => {
   return (
     <>
       <nav className={styles.navFlex}>
-        <h3>BREWDOG</h3>
-        <img src={logo} alt="brewdog logo" />
-        <div className={styles.searchBox}>
-          <SearchBox
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            setBeerName={setBeerName}
-            minABV={minABV}
-            maxABV={maxABV}
-            setMinABV={setMinABV}
-            setMaxABV={setMaxABV}
-            updateBeers={updateBeers}
-            searchByName={searchBeers}
-          />
+        <div className={styles.navFlex}>
+          <h3>BREWDOG</h3>
+          <img src={logo} alt="brewdog logo" />
+          <div className={styles.searchBox}>
+            <SearchBox
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              setBeerName={setBeerName}
+              minABV={minABV}
+              maxABV={maxABV}
+              setMinABV={setMinABV}
+              setMaxABV={setMaxABV}
+              updateBeers={updateBeers}
+              searchByName={searchBeers}
+            />
+          </div>
         </div>
       </nav>
     </>
