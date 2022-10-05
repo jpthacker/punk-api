@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
+import logo from "../../assets/brewdog-logo.jpeg";
 
 const Navbar = (props) => {
   const {
@@ -19,6 +20,7 @@ const Navbar = (props) => {
     <>
       <nav className={styles.navFlex}>
         <h3>BREWDOG</h3>
+        <img src={logo} alt="brewdog logo" />
         <div className={styles.searchBox}>
           <SearchBox
             isOpen={isOpen}

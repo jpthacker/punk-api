@@ -26,7 +26,7 @@ const FiltersList = (props) => {
         value={minABV}
         onInput={(e) => {
           setMinABV(e.target.value);
-          updateBeers(searchBeers);
+          // updateBeers(searchBeers);
         }}
       />
       <label>Max ABV%</label>
@@ -39,7 +39,7 @@ const FiltersList = (props) => {
         value={maxABV}
         onInput={(e) => {
           setMaxABV(e.target.value);
-          updateBeers(searchBeers);
+          // updateBeers(searchBeers);
         }}
       />
       <button

@@ -13,6 +13,12 @@ nav {
     font-size: 2.5rem;
     font-family: $secondary-text;
   }
+
+  img {
+    object-fit: contain;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 .navFlex {
@@ -20,6 +26,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes fadeIn {

@@ -44,8 +44,8 @@ const SearchBox = (props) => {
         placeholder="Search..."
         onChange={(e) => {
           setBeerName(e.target.value);
-          console.log(updateBeers(searchBeers));
-          updateBeers(searchBeers);
+          // console.log(updateBeers(searchBeers));
+          // updateBeers(searchBeers);
         }}
         onFocus={(e) => {
           e.stopPropagation();
