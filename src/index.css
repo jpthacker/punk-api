@@ -17,3 +17,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Heading Pro";
+  src: local("Heading Pro"),
+   url("../src/assets/fonts/Heading-Pro-ExtraBold-trial.ttf") format("ttf");
+  }

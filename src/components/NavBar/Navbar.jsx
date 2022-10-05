@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
-import logo from "../../assets/brewdog-logo.jpeg";
+import logo from "../../assets/images/brewdog-logo.jpeg";
 
 const Navbar = (props) => {
   const {

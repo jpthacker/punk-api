@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 $primary-color: rgb(0, 0, 0);
 $secondary-color: rgb(26, 176, 144);
 $tertiary-color: rgb(245, 245, 245);
+$quaternary-color: rgb(100, 100, 100);
 
 $primary-border: solid 2px $tertiary-color;
 $secondary-border: solid 2px $secondary-color;
 
 $primary-text: "Inter", sans-serif;
-$secondary-text: "Teko", sans-serif;
+$secondary-text: "Bebas Neue", sans-serif;
