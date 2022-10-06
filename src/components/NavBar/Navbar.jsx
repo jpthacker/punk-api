@@ -18,7 +18,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav className={styles.navFlex}>
+      <nav>
         <div className={styles.navFlex}>
           <h3>BREWDOG</h3>
           <img src={logo} alt="brewdog logo" />

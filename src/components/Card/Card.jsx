@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <>
       <section className={styles.beerCard}>
-        <div className={styles.img}>
+        <div className={styles.imgContainer}>
           <img src={image_url} alt="beer-img" />
         </div>
         <h2>{name.toUpperCase()}</h2>
