@@ -11,6 +11,13 @@ const Main = (props) => {
     <>
       <section className={styles.main}>
         <section className={styles.cards}>
+          <div className={styles.banner}>
+            <h2>BEERS</h2>
+            <p>
+              Search Brewdog's back catalogue of beers and choose your
+              favourites.
+            </p>
+          </div>
           <CardList beers={beers} />
         </section>
         {getOverlay}

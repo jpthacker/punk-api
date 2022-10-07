@@ -6,6 +6,34 @@
   position: relative;
   z-index: -1;
 
+  .banner {
+    background-image: url("../../assets/images/pexels-north-1296262.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    gap: 1.5rem;
+
+    h2 {
+      font-family: $secondary-text;
+      font-size: 3.5rem;
+      font-weight: $h2-font-weight;
+    }
+
+    p {
+      font-family: $primary-text;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+
   .cards {
     width: 100%;
     max-width: 92rem;
@@ -24,7 +52,7 @@
 
   .overlay {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 0;
