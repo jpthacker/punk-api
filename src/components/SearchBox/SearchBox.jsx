@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./SearchBox.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import FiltersList from "../FiltersList";
+import SearchList from "../SearchList";
 
 const SearchBox = (props) => {
   const {
@@ -19,9 +19,9 @@ const SearchBox = (props) => {
 
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
-  const getFiltersList = isOpen ? (
+  const getSearchList = isOpen ? (
     <div className={styles.filters}>
-      <FiltersList
+      <SearchList
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         minABV={minABV}
@@ -50,7 +50,7 @@ const SearchBox = (props) => {
           setIsOpen(!isOpen);
         }}
       />
-      {getFiltersList}
+      {getSearchList}
     </div>
   );
 };
