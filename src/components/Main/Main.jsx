@@ -4,7 +4,7 @@ import FiltersList from "../FiltersList";
 import CardList from "../CardList";
 
 const Main = (props) => {
-  const { beers, isOpen } = props;
+  const { beers, isOpen, minABV, maxABV, setMinABV, setMaxABV } = props;
 
   const getOverlay = isOpen ? <div className={styles.overlay}></div> : "";
 
@@ -19,7 +19,12 @@ const Main = (props) => {
               favourites.
             </p>
           </div>
-          <FiltersList />
+          <FiltersList
+            minABV={minABV}
+            maxABV={maxABV}
+            setMinABV={setMinABV}
+            setMaxABV={setMaxABV}
+          />
           <CardList beers={beers} />
         </section>
         {getOverlay}

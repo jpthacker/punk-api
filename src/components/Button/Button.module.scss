@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-button {
+.button {
   font-family: $primary-text;
   font-size: $p-font-size;
   font-weight: 500;
@@ -8,7 +8,8 @@ button {
   background-color: #fff;
   border: $primary-border;
   border-radius: 2rem;
-  padding: 0.6em 1.8em;
+  padding: 0.8em 1.8em;
+  transition: ease-in-out 0.25s;
 
   &:hover {
     cursor: pointer;

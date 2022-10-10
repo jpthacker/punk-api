@@ -35,16 +35,19 @@ const App = () => {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             setBeerName={setBeerName}
-            minABV={minABV}
-            maxABV={maxABV}
-            setMinABV={setMinABV}
-            setMaxABV={setMaxABV}
             updateBeers={updateBeers}
             searchBeers={searchBeers}
           />
         </section>
         <section className={styles.cards}>
-          <Main beers={beers} isOpen={isOpen} />
+          <Main
+            beers={beers}
+            isOpen={isOpen}
+            minABV={minABV}
+            maxABV={maxABV}
+            setMinABV={setMinABV}
+            setMaxABV={setMaxABV}
+          />
         </section>
       </section>
     </>

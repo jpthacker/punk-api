@@ -7,34 +7,36 @@ const FiltersList = (props) => {
 
   return (
     <section className={styles.filtersList}>
-      <h4>FILTERS</h4>
+      <p>Filters:</p>
       <Button />
-      <Button />
-      <Button />
-      <label>Min ABV%</label>
-      <input
-        className={styles.range}
-        type="range"
-        min="0"
-        max={maxABV}
-        step="0.1"
-        value={minABV}
-        onInput={(e) => {
-          setMinABV(e.target.value);
-        }}
-      />
-      <label>Max ABV%</label>
-      <input
-        className={styles.range}
-        type="range"
-        min={minABV}
-        max="55"
-        step="0.1"
-        value={maxABV}
-        onInput={(e) => {
-          setMaxABV(e.target.value);
-        }}
-      />
+      <div>
+        <label>Min ABV%</label>
+        <input
+          className={styles.range}
+          type="range"
+          min="0"
+          max={maxABV}
+          step="0.1"
+          value={minABV}
+          onInput={(e) => {
+            setMinABV(e.target.value);
+          }}
+        />
+      </div>
+      <div>
+        <label>Max ABV%</label>
+        <input
+          className={styles.range}
+          type="range"
+          min={minABV}
+          max="55"
+          step="0.1"
+          value={maxABV}
+          onInput={(e) => {
+            setMaxABV(e.target.value);
+          }}
+        />
+      </div>
     </section>
   );
 };
