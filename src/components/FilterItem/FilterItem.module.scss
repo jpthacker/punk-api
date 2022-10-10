@@ -1,0 +1,29 @@
+@import "../../variables.scss";
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  h4 {
+    font-family: $primary-text;
+    font-size: $h4-font-size;
+    font-weight: $h4-font-weight;
+    color: $primary-color;
+  }
+
+  .checkBox {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: $secondary-border;
+    padding: 0.15rem;
+    color: #fff;
+    accent-color: $primary-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
