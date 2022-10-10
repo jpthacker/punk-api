@@ -6,9 +6,10 @@
   position: relative;
 
   .banner {
-    background-image: url("../../assets/images/pexels-north-1296262.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url("../../assets/images/timothy-dykes-Lq1rOaigDoY-unsplash.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 85%;
     background-size: cover;
     width: 100%;
     height: 1rem * 16;
