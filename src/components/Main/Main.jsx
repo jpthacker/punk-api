@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Main.module.scss";
+import FiltersList from "../FiltersList";
 import CardList from "../CardList";
 
 const Main = (props) => {
@@ -18,6 +19,7 @@ const Main = (props) => {
               favourites.
             </p>
           </div>
+          <FiltersList />
           <CardList beers={beers} />
         </section>
         {getOverlay}

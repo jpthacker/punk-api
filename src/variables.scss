@@ -5,8 +5,8 @@ $secondary-color: rgb(26, 176, 144);
 $tertiary-color: rgb(245, 245, 245);
 $quaternary-color: rgb(100, 100, 100);
 
-$primary-border: solid 2px $tertiary-color;
-$secondary-border: solid 2px $secondary-color;
+$primary-border: solid 1px $tertiary-color;
+$secondary-border: solid 1px $primary-color;
 
 $primary-text: "Inter", sans-serif;
 $secondary-text: "Bebas Neue", sans-serif;

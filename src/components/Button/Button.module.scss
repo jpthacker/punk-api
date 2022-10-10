@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+button {
+  font-family: $primary-text;
+  font-size: $p-font-size;
+  font-weight: 500;
+  color: $primary-color;
+  background-color: #fff;
+  border: $primary-border;
+  border-radius: 2rem;
+  padding: 0.6em 1.8em;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: $primary-color;
+    border: $secondary-border;
+  }
+}

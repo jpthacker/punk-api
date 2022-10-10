@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./FiltersList.module.scss";
+import Button from "../Button";
 
 const FiltersList = (props) => {
   const { minABV, maxABV, setMinABV, setMaxABV } = props;
@@ -6,6 +8,9 @@ const FiltersList = (props) => {
   return (
     <section className={styles.filtersList}>
       <h4>FILTERS</h4>
+      <Button />
+      <Button />
+      <Button />
       <label>Min ABV%</label>
       <input
         className={styles.range}
@@ -30,14 +35,6 @@ const FiltersList = (props) => {
           setMaxABV(e.target.value);
         }}
       />
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setIsOpen(!isOpen);
-        }}
-      >
-        Done
-      </button>
     </section>
   );
 };
