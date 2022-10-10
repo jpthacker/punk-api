@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Card.module.scss";
+import Button from "../Button";
 
 const Card = (props) => {
   const { image_url, name, tagline, abv, description } = props.beer;
@@ -12,7 +13,9 @@ const Card = (props) => {
         <h2>{name.toUpperCase()}</h2>
         <h4>{tagline.toUpperCase()}</h4>
         <h4 className={styles.abv}>{abv}% ABV</h4>
-        {/* <button></button> */}
+        <div className={styles.cardButton}>
+          <Button text="Add to Favourites" />
+        </div>
       </section>
     </>
   );

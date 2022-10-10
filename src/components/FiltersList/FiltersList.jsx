@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./FiltersList.module.scss";
 import FilterItem from "../FilterItem";
-import Button from "../Button";
 
 const FiltersList = (props) => {
   const { minABV, maxABV, setMinABV, setMaxABV } = props;
@@ -11,7 +10,6 @@ const FiltersList = (props) => {
       <p>Filters:</p>
       <FilterItem text="Classic Range" />
       <FilterItem text="Low Acidity" />
-      <Button />
       <div>
         <label>Min ABV%</label>
         <input
