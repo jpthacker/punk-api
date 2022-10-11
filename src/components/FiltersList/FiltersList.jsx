@@ -3,12 +3,17 @@ import styles from "./FiltersList.module.scss";
 import FilterItem from "../FilterItem";
 
 const FiltersList = (props) => {
-  const { minABV, maxABV, setMinABV, setMaxABV } = props;
+  const { setBrewedBefore, minABV, maxABV, setMinABV, setMaxABV } = props;
 
   return (
     <section className={styles.filtersList}>
       <p>Filters:</p>
-      <FilterItem text="Classic Range" />
+      <FilterItem
+        text="Classic Range"
+        changeState={setBrewedBefore}
+        state1="12-2011"
+        state2="10-2022"
+      />
       <FilterItem text="Low Acidity" />
       <div>
         <label>Min ABV%</label>

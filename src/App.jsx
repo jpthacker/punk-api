@@ -8,14 +8,17 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [beers, setBeers] = useState([]);
   const [beerName, setBeerName] = useState();
+  const [brewedBefore, setBrewedBefore] = useState("10-2022");
+  // const [acidity, setAcidity] = useState()
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
 
   const searchByName = beerName ? `beer_name=${beerName}` : "";
+  const searchbyBrewDate = `brewed_before=${brewedBefore}`;
   const searchByMinABV = `&abv_gt=${minABV}`;
   const searchByMaxABV = `&abv_lt=${maxABV}`;
 
-  const searchBeers = `${searchByName}${searchByMinABV}${searchByMaxABV}`;
+  const searchBeers = `${searchbyBrewDate}${searchByMinABV}${searchByMaxABV}`;
 
   const updateBeers = async (searchParams) => {
     console.log(searchParams);
@@ -25,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     updateBeers(searchBeers);
-  }, [beerName, minABV, maxABV]);
+  }, [brewedBefore, minABV, maxABV]);
 
   return (
     <>
@@ -43,6 +46,8 @@ const App = () => {
           <Main
             beers={beers}
             isOpen={isOpen}
+            brewedBefore={brewedBefore}
+            setBrewedBefore={setBrewedBefore}
             minABV={minABV}
             maxABV={maxABV}
             setMinABV={setMinABV}
