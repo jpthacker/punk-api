@@ -34,7 +34,7 @@ const FiltersList = (props) => {
         state1={80}
         state2={0}
       />
-      <div>
+      <div className={styles.slider}>
         <label>Min ABV%</label>
         <input
           className={styles.range}
@@ -48,7 +48,7 @@ const FiltersList = (props) => {
           }}
         />
       </div>
-      <div>
+      <div className={styles.slider}>
         <label>Max ABV%</label>
         <input
           className={styles.range}
