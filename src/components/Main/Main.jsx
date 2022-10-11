@@ -8,6 +8,8 @@ const Main = (props) => {
     beers,
     isOpen,
     setBrewedBefore,
+    setPh,
+    setIBU,
     minABV,
     maxABV,
     setMinABV,
@@ -29,6 +31,8 @@ const Main = (props) => {
           </div>
           <FiltersList
             setBrewedBefore={setBrewedBefore}
+            setPh={setPh}
+            setIBU={setIBU}
             minABV={minABV}
             maxABV={maxABV}
             setMinABV={setMinABV}
