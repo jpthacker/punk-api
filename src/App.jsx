@@ -7,6 +7,7 @@ import { getBeers } from "./services/beers.service";
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [beers, setBeers] = useState([]);
+  const [search, setSearch] = useState([]);
   const [beerName, setBeerName] = useState();
   const [brewedBefore, setBrewedBefore] = useState("10-2022");
   const [ph, setPh] = useState(14);
@@ -26,27 +27,33 @@ const App = () => {
   const searchByMinABV = `&abv_gt=${minABV}`;
   const searchByMaxABV = `&abv_lt=${maxABV}`;
 
-  const searchBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}`;
+  const filterBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}`;
+  const searchBeers = `${searchByName}`;
 
   const updateBeers = async (searchParams) => {
-    console.log(searchParams);
     const apiBeers = await getBeers(searchParams);
     setBeers(searchByPh(apiBeers, ph));
   };
 
+  const updateSearch = async (searchParams) => {
+    const apiSearch = await getBeers(searchParams);
+    setSearch(apiSearch);
+  };
+
   useEffect(() => {
-    updateBeers(searchBeers);
+    updateBeers(filterBeers);
   }, [brewedBefore, ph, IBU, minABV, maxABV]);
 
-  // useEffect(() => {
-  //   setBeers(searchByPh(beers, ph));
-  // }, [ph]);
+  useEffect(() => {
+    updateSearch(searchBeers);
+  }, [beerName]);
 
   return (
     <>
       <section className={styles.content}>
         <section className={styles.nav}>
           <NavBar
+            search={search}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             setBeerName={setBeerName}

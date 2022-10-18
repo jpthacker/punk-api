@@ -11,12 +11,16 @@
 
   h4 {
     font-family: $secondary-text;
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   .filterItem {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .searchCards {
+    width: 100%;
   }
 }

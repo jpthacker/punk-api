@@ -5,32 +5,13 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import SearchList from "../SearchList";
 
 const SearchBox = (props) => {
-  const {
-    isOpen,
-    setIsOpen,
-    setBeerName,
-    minABV,
-    maxABV,
-    setMinABV,
-    setMaxABV,
-    updateBeers,
-    searchBeers,
-  } = props;
+  const { search, isOpen, setIsOpen, setBeerName } = props;
 
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
   const getSearchList = isOpen ? (
     <div className={styles.filters}>
-      <SearchList
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        minABV={minABV}
-        maxABV={maxABV}
-        setMinABV={setMinABV}
-        setMaxABV={setMaxABV}
-        updateBeers={updateBeers}
-        searchBeers={searchBeers}
-      />
+      <SearchList search={search} />
     </div>
   ) : (
     ""
