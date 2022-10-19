@@ -8,15 +8,12 @@ import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [beers, setBeers] = useState([]);
-  const [search, setSearch] = useState([]);
-  const [beerName, setBeerName] = useState();
   const [brewedBefore, setBrewedBefore] = useState("10-2022");
   const [ph, setPh] = useState(14);
   const [IBU, setIBU] = useState(0);
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
 
-  const searchByName = beerName ? `per_page=5&beer_name=${beerName}` : "";
   const searchbyBrewDate = `brewed_before=${brewedBefore}`;
   const searchByPh = (beersArr, phValue) => {
     const filteredArr = beersArr.filter((beer) => {
@@ -29,39 +26,21 @@ const App = () => {
   const searchByMaxABV = `&abv_lt=${maxABV}`;
 
   const filterBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}&per_page=80`;
-  const searchBeers = `${searchByName}`;
 
   const updateBeers = async (searchParams) => {
     const apiBeers = await getBeers(searchParams);
     setBeers(searchByPh(apiBeers, ph));
   };
 
-  const updateSearch = async (searchParams) => {
-    const apiSearch = await getBeers(searchParams);
-    setSearch(apiSearch);
-  };
-
   useEffect(() => {
     updateBeers(filterBeers);
   }, [brewedBefore, ph, IBU, minABV, maxABV]);
-
-  useEffect(() => {
-    updateSearch(searchBeers);
-  }, [beerName]);
 
   return (
     <>
       <section className={styles.content}>
         <section className={styles.nav}>
-          <NavBar
-            search={search}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            beerName={beerName}
-            setBeerName={setBeerName}
-            updateBeers={updateBeers}
-            searchBeers={searchBeers}
-          />
+          <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
         </section>
         <section className={styles.cards}>
           <Main

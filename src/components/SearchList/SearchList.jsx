@@ -47,7 +47,7 @@ const SearchList = (props) => {
       <>
         <h4>SEARCH RESULTS</h4>
         <h2>SORRY</h2>
-        <p>{`No search results found for "${beerName}"`}</p>
+        <p>{`No search results for "${beerName}"`}</p>
       </>
     ) : (
       ""

@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./SearchBox.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { getBeers } from "../../services/beers.service";
 import SearchList from "../SearchList";
 
 const SearchBox = (props) => {
-  const { search, isOpen, setIsOpen, beerName, setBeerName } = props;
+  const { isOpen, setIsOpen } = props;
 
-  const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
+  const [search, setSearch] = useState([]);
+  const [beerName, setBeerName] = useState();
+
+  const searchByName = beerName ? `per_page=5&beer_name=${beerName}` : "";
+
+  const updateSearch = async (searchParams) => {
+    const apiSearch = await getBeers(searchParams);
+    setSearch(apiSearch);
+  };
+
+  useEffect(() => {
+    updateSearch(searchByName);
+  }, [beerName]);
 
   const getSearchList = isOpen ? (
     <div className={styles.filters}>
@@ -16,6 +29,8 @@ const SearchBox = (props) => {
   ) : (
     ""
   );
+
+  const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
   return (
     <div className={styles.search}>
