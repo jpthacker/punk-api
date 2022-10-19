@@ -3,6 +3,7 @@ import styles from "./App.module.scss";
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import { getBeers } from "./services/beers.service";
+import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const App = () => {
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
 
-  const searchByName = beerName ? `beer_name=${beerName}` : "";
+  const searchByName = beerName ? `per_page=5&beer_name=${beerName}` : "";
   const searchbyBrewDate = `brewed_before=${brewedBefore}`;
   const searchByPh = (beersArr, phValue) => {
     const filteredArr = beersArr.filter((beer) => {
@@ -27,7 +28,7 @@ const App = () => {
   const searchByMinABV = `&abv_gt=${minABV}`;
   const searchByMaxABV = `&abv_lt=${maxABV}`;
 
-  const filterBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}`;
+  const filterBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}&per_page=80`;
   const searchBeers = `${searchByName}`;
 
   const updateBeers = async (searchParams) => {
@@ -56,6 +57,7 @@ const App = () => {
             search={search}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
+            beerName={beerName}
             setBeerName={setBeerName}
             updateBeers={updateBeers}
             searchBeers={searchBeers}

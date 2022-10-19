@@ -4,8 +4,15 @@ import SearchBox from "../SearchBox";
 import logo from "../../assets/images/brewdog-logo.jpeg";
 
 const Navbar = (props) => {
-  const { search, isOpen, setIsOpen, setBeerName, updateBeers, searchBeers } =
-    props;
+  const {
+    search,
+    isOpen,
+    setIsOpen,
+    beerName,
+    setBeerName,
+    updateBeers,
+    searchBeers,
+  } = props;
 
   return (
     <>
@@ -18,6 +25,7 @@ const Navbar = (props) => {
               search={search}
               isOpen={isOpen}
               setIsOpen={setIsOpen}
+              beerName={beerName}
               setBeerName={setBeerName}
               updateBeers={updateBeers}
               searchByName={searchBeers}

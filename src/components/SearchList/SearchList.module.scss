@@ -9,6 +9,12 @@
   align-items: flex-start;
   padding: 1rem;
 
+  h2 {
+    font-family: $secondary-text;
+    font-size: $h2-font-size;
+    font-weight: $h2-font-weight;
+  }
+
   h4 {
     font-family: $secondary-text;
     font-size: 1.25rem;

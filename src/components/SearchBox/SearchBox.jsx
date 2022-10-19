@@ -5,13 +5,13 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import SearchList from "../SearchList";
 
 const SearchBox = (props) => {
-  const { search, isOpen, setIsOpen, setBeerName } = props;
+  const { search, isOpen, setIsOpen, beerName, setBeerName } = props;
 
   const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
   const getSearchList = isOpen ? (
     <div className={styles.filters}>
-      <SearchList search={search} />
+      <SearchList search={search} beerName={beerName} />
     </div>
   ) : (
     ""
@@ -27,6 +27,10 @@ const SearchBox = (props) => {
           setBeerName(e.target.value);
         }}
         onFocus={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+        }}
+        onBlur={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
