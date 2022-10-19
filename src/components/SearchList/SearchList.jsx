@@ -13,31 +13,23 @@ const SearchList = (props) => {
   };
 
   useEffect(() => {
-    getHeadliners("ids=2|42|91|106|132");
+    getHeadliners("ids=2|42|91|106|132|168");
   }, []);
 
-  const getBeersJSX = (beer) => (
-    <div className={styles.card} key={beer.id}>
-      <SearchItem beer={beer} />
-    </div>
-  );
+  const getBeersJSX = (beer) => <SearchItem beer={beer} key={beer.id} />;
 
   const headlinersJSX = (
-    <>
-      <h4>BREWDOG'S HEADLINERS</h4>
-      <section className={styles.searchCards}>
-        {headliners.map(getBeersJSX)}
-      </section>
-    </>
+    <section className={styles.searchCards}>
+      <h4 className={styles.cardsHeader}>BREWDOG CURRENTS AND CLASSICS</h4>
+      {headliners.map(getBeersJSX)}
+    </section>
   );
 
   const searchJSX = (
-    <>
-      <h4>SEARCH RESULTS</h4>
-      <section className={styles.searchCards}>
-        {searchedBeers.map(getBeersJSX)}
-      </section>
-    </>
+    <section className={styles.searchCards}>
+      <h4 className={styles.cardsHeader}>SEARCH RESULTS</h4>
+      {searchedBeers.map(getBeersJSX)}
+    </section>
   );
 
   const handleSearch =
@@ -45,21 +37,19 @@ const SearchList = (props) => {
 
   const handleNotFound =
     beerName && !searchedBeers.length ? (
-      <>
+      <div className={styles.notFound}>
         <h4>SEARCH RESULTS</h4>
         <h2>SORRY</h2>
         <p>{`No search results for "${beerName}"`}</p>
-      </>
+      </div>
     ) : (
       ""
     );
 
   return (
-    <section className={styles.filtersList}>
-      <section className={styles.searchCards}>
-        {handleNotFound}
-        {handleSearch}
-      </section>
+    <section className={styles.searchList}>
+      {handleNotFound}
+      {handleSearch}
     </section>
   );
 };

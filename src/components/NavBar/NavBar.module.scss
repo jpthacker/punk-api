@@ -11,39 +11,39 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.navFlex {
-  width: 100%;
-  max-width: 92rem;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  position: relative;
+  .navFlex {
+    width: 100%;
+    max-width: 92rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
 
-  h3 {
-    font-size: 2.5rem;
-    font-family: $secondary-text;
+    h3 {
+      font-size: 2.5rem;
+      font-family: $secondary-text;
+    }
+
+    .navImg {
+      object-fit: contain;
+      height: 2.5rem;
+      width: 2.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 
-  .navImg {
-    object-fit: contain;
-    height: 2.5rem;
-    width: 2.5rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 }

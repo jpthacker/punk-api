@@ -41,7 +41,7 @@ const FiltersList = (props) => {
           type="range"
           min="0"
           max={maxABV}
-          step="0.2"
+          step="2.5"
           value={minABV}
           onInput={(e) => {
             setMinABV(e.target.value);
@@ -55,7 +55,7 @@ const FiltersList = (props) => {
           type="range"
           min={minABV}
           max="55"
-          step="0.2"
+          step="2.5"
           value={maxABV}
           onInput={(e) => {
             setMaxABV(e.target.value);

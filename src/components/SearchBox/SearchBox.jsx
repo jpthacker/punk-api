@@ -24,7 +24,7 @@ const SearchBox = (props) => {
   }, [beerName]);
 
   const getSearchList = isOpen ? (
-    <div className={styles.filters}>
+    <div className={styles.searchPopUp}>
       <SearchList searchedBeers={searchedBeers} beerName={beerName} />
     </div>
   ) : (

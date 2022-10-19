@@ -1,13 +1,14 @@
 @import "../../variables.scss";
 
-.filtersList {
+.searchList {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 1rem 1rem;
 
   h2 {
     font-family: $secondary-text;
@@ -20,13 +21,25 @@
     font-size: 1.25rem;
   }
 
-  .filterItem {
+  p {
+    font-family: $primary-text;
+    font-size: $p-font-size;
+  }
+
+  .notFound {
+    width: 100%;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 0.5rem;
+    border-bottom: $primary-border;
   }
 
   .searchCards {
     width: 100%;
+  }
+
+  .cardsHeader {
+    margin: 0.5rem 0;
   }
 }

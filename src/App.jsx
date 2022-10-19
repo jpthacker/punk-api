@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./App.module.scss";
 import NavBar from "./components/NavBar";
-import Main from "./components/Main";
+import Main from "./containers/Main";
 import { getBeers } from "./services/beers.service";
 import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
