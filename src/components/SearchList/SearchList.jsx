@@ -4,11 +4,11 @@ import SearchItem from "../SearchItem";
 import { getBeers } from "../../services/beers.service";
 
 const SearchList = (props) => {
-  const { search, beerName } = props;
+  const { searchedBeers, beerName } = props;
   const [headliners, setHeadliners] = useState([]);
 
-  const getHeadliners = async (parameters) => {
-    const headlinerBeers = await getBeers(parameters);
+  const getHeadliners = async (ids) => {
+    const headlinerBeers = await getBeers(ids);
     setHeadliners(headlinerBeers);
   };
 
@@ -35,15 +35,16 @@ const SearchList = (props) => {
     <>
       <h4>SEARCH RESULTS</h4>
       <section className={styles.searchCards}>
-        {search.map(getBeersJSX)}
+        {searchedBeers.map(getBeersJSX)}
       </section>
     </>
   );
 
-  const handleSearch = beerName && search.length ? searchJSX : headlinersJSX;
+  const handleSearch =
+    beerName && searchedBeers.length ? searchJSX : headlinersJSX;
 
   const handleNotFound =
-    beerName && !search.length ? (
+    beerName && !searchedBeers.length ? (
       <>
         <h4>SEARCH RESULTS</h4>
         <h2>SORRY</h2>

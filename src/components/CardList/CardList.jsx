@@ -3,7 +3,7 @@ import styles from "./CardList.module.scss";
 import Card from "../Card";
 
 const CardList = (props) => {
-  const { beers } = props;
+  const { filteredBeers } = props;
 
   const getBeersJSX = (beer) => (
     <div className={styles.card} key={beer.id}>
@@ -11,7 +11,9 @@ const CardList = (props) => {
     </div>
   );
 
-  return <section className={styles.cards}>{beers.map(getBeersJSX)}</section>;
+  return (
+    <section className={styles.cards}>{filteredBeers.map(getBeersJSX)}</section>
+  );
 };
 
 export default CardList;

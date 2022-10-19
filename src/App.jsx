@@ -7,33 +7,33 @@ import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [beers, setBeers] = useState([]);
+  const [filteredBeers, setFilteredBeers] = useState([]);
   const [brewedBefore, setBrewedBefore] = useState("10-2022");
   const [ph, setPh] = useState(14);
   const [IBU, setIBU] = useState(0);
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
 
-  const searchbyBrewDate = `brewed_before=${brewedBefore}`;
-  const searchByPh = (beersArr, phValue) => {
+  const filterbyBrewDate = `brewed_before=${brewedBefore}`;
+  const filterByIBU = `&ibu_gt=${IBU}`;
+  const filterByMinABV = `&abv_gt=${minABV}`;
+  const filterByMaxABV = `&abv_lt=${maxABV}`;
+  const filterByPh = (beersArr, phValue) => {
     const filteredArr = beersArr.filter((beer) => {
       return beer.ph && beer.ph < phValue;
     });
     return filteredArr;
   };
-  const searchByIBU = `&ibu_gt=${IBU}`;
-  const searchByMinABV = `&abv_gt=${minABV}`;
-  const searchByMaxABV = `&abv_lt=${maxABV}`;
 
-  const filterBeers = `${searchbyBrewDate}${searchByIBU}${searchByMinABV}${searchByMaxABV}&per_page=80`;
+  const filters = `${filterbyBrewDate}${filterByIBU}${filterByMinABV}${filterByMaxABV}&per_page=80`;
 
-  const updateBeers = async (searchParams) => {
-    const apiBeers = await getBeers(searchParams);
-    setBeers(searchByPh(apiBeers, ph));
+  const updateFilteredBeers = async (filters) => {
+    const apiBeers = await getBeers(filters);
+    setFilteredBeers(filterByPh(apiBeers, ph));
   };
 
   useEffect(() => {
-    updateBeers(filterBeers);
+    updateFilteredBeers(filters);
   }, [brewedBefore, ph, IBU, minABV, maxABV]);
 
   return (
@@ -44,7 +44,7 @@ const App = () => {
         </section>
         <section className={styles.cards}>
           <Main
-            beers={beers}
+            filteredBeers={filteredBeers}
             isOpen={isOpen}
             setBrewedBefore={setBrewedBefore}
             setPh={setPh}
