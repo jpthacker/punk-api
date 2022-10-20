@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Main.module.scss";
-import FiltersList from "../../components/FiltersList";
-import CardList from "../../components/CardList";
+import FiltersList from "../FiltersList";
+import CardList from "../CardList";
 
 const Main = (props) => {
   const {

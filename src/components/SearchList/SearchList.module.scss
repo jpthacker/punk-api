@@ -33,6 +33,7 @@
     flex-direction: column;
     gap: 0.5rem;
     border-bottom: $primary-border;
+    margin-bottom: 0.5rem;
   }
 
   .searchCards {
@@ -40,6 +41,6 @@
   }
 
   .cardsHeader {
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
 }

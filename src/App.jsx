@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import styles from "./App.module.scss";
 import NavBar from "./components/NavBar";
-import Main from "./containers/Main";
+import Pages from "./Pages";
 import { getBeers } from "./services/beers.service";
 import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
@@ -37,13 +38,13 @@ const App = () => {
   }, [brewedBefore, ph, IBU, minABV, maxABV]);
 
   return (
-    <>
+    <Router>
       <section className={styles.content}>
         <section className={styles.nav}>
           <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
         </section>
         <section className={styles.cards}>
-          <Main
+          <Pages
             filteredBeers={filteredBeers}
             isOpen={isOpen}
             setBrewedBefore={setBrewedBefore}
@@ -56,7 +57,7 @@ const App = () => {
           />
         </section>
       </section>
-    </>
+    </Router>
   );
 };
 

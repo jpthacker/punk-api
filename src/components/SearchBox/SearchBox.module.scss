@@ -8,7 +8,7 @@
   transition: width ease-in-out 300ms;
 
   &:focus-within {
-    width: 21rem;
+    width: 24rem;
   }
 
   span {
@@ -29,7 +29,7 @@
   top: 3.75rem;
   right: 2rem;
   background-color: #fff;
-  width: 24.5%;
+  width: 24rem;
   animation: fadeIn;
   animation-duration: 0.1s;
 }
