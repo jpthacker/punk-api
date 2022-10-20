@@ -7,7 +7,6 @@ import { getBeers } from "./services/beers.service";
 import { faLaptopFile } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [filteredBeers, setFilteredBeers] = useState([]);
   const [brewedBefore, setBrewedBefore] = useState("10-2022");
   const [ph, setPh] = useState(14);
@@ -41,12 +40,11 @@ const App = () => {
     <Router>
       <section className={styles.content}>
         <section className={styles.nav}>
-          <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
+          <NavBar />
         </section>
         <section className={styles.cards}>
           <Pages
             filteredBeers={filteredBeers}
-            isOpen={isOpen}
             setBrewedBefore={setBrewedBefore}
             setPh={setPh}
             setIBU={setIBU}

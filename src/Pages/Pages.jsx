@@ -6,7 +6,6 @@ import Main from "../components/Main";
 const Pages = (props) => {
   const {
     filteredBeers,
-    isOpen,
     setBrewedBefore,
     setPh,
     setIBU,
@@ -23,7 +22,6 @@ const Pages = (props) => {
         element={
           <Main
             filteredBeers={filteredBeers}
-            isOpen={isOpen}
             setBrewedBefore={setBrewedBefore}
             setPh={setPh}
             setIBU={setIBU}

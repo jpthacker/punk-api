@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
 import logo from "../../assets/images/brewdog-logo.jpeg";
 
-const Navbar = (props) => {
-  const { isOpen, setIsOpen } = props;
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const getOverlay = isOpen ? <div className={styles.overlay}></div> : "";
 
   return (
     <>
@@ -16,6 +18,7 @@ const Navbar = (props) => {
             <SearchBox isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
+        {getOverlay}
       </nav>
     </>
   );

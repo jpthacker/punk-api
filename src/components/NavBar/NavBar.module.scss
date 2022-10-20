@@ -46,4 +46,14 @@ nav {
       opacity: 100%;
     }
   }
+
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 5rem;
+    animation-name: fadeIn;
+    animation-duration: 0.1s;
+  }
 }

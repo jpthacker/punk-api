@@ -6,7 +6,6 @@ import CardList from "../CardList";
 const Main = (props) => {
   const {
     filteredBeers,
-    isOpen,
     setBrewedBefore,
     setPh,
     setIBU,
@@ -15,8 +14,6 @@ const Main = (props) => {
     setMinABV,
     setMaxABV,
   } = props;
-
-  const getOverlay = isOpen ? <div className={styles.overlay}></div> : "";
 
   return (
     <>
@@ -40,7 +37,6 @@ const Main = (props) => {
           />
           <CardList filteredBeers={filteredBeers} />
         </section>
-        {getOverlay}
       </section>
     </>
   );
