@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../components/NotFound";
-import Main from "../components/Main";
+import Main from "../containers/Main";
 
 const Pages = (props) => {
   const {
@@ -36,9 +36,9 @@ const Pages = (props) => {
         path="*"
         element={
           <NotFound
-            title={"404 NOT FOUND"}
-            messageOne={"OOPS! THIS PAGE IS STILL BEING BREWED"}
-            messageTwo={"CLICK ON THE LOGO ABOVE TO RETURN TO CATALOGUE"}
+            header={"404 not found"}
+            messageOne={"Oops! Looks like this page is still being brewed"}
+            messageTwo={"Click on the logo above to return to the catalogue"}
           />
         }
       />

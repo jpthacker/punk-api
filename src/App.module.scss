@@ -1,7 +1,6 @@
 @import "./variables.scss";
 
 .content {
-  margin: 0 auto;
   width: 100%;
   max-width: 100%;
 
@@ -13,8 +12,11 @@
     z-index: +1;
   }
 
-  .cards {
+  .main {
     min-width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
+    max-width: 92rem;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 }

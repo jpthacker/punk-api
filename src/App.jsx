@@ -42,7 +42,7 @@ const App = () => {
         <section className={styles.nav}>
           <NavBar />
         </section>
-        <section className={styles.cards}>
+        <section className={styles.main}>
           <Pages
             filteredBeers={filteredBeers}
             setBrewedBefore={setBrewedBefore}
