@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Main.module.scss";
 import FiltersList from "../FiltersList";
 import CardList from "../CardList";
+import Banner from "../Banner";
 
 const Main = (props) => {
   const {
@@ -19,13 +20,7 @@ const Main = (props) => {
     <>
       <section className={styles.main}>
         <section className={styles.cards}>
-          <div className={styles.banner}>
-            <h2>BEERS</h2>
-            <p>
-              Search Brewdog's back catalogue of beers and choose your
-              favourites.
-            </p>
-          </div>
+          <Banner />
           <FiltersList
             setBrewedBefore={setBrewedBefore}
             setPh={setPh}

@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.notFound {
+  height: 100%;
+  width: 100%;
+
+  .imgContainer {
+    width: 100%;
+    height: 1rem * 24;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+    }
+  }
+
+  .notFoundText {
+    text-align: center;
+
+    h2 {
+      font-family: $secondary-text;
+      font-size: 2.5rem;
+      font-weight: $h2-font-weight;
+      margin: 2rem 0 0.5rem 0;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  }
+}
