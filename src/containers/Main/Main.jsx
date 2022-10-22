@@ -3,7 +3,7 @@ import styles from "./Main.module.scss";
 import FiltersList from "../../components/FiltersList";
 import CardList from "../../components/CardList";
 import Banner from "../../components/Banner";
-import NotFound from "../../components/NotFound";
+import FeedbackText from "../../components/FeedbackText";
 
 const Main = (props) => {
   const {
@@ -20,10 +20,9 @@ const Main = (props) => {
   const contentJsx = filteredBeers.length ? (
     <CardList filteredBeers={filteredBeers} />
   ) : (
-    <NotFound
+    <FeedbackText
       header="NO BEERS"
-      messageOne="try searching for your favpourite beer using the search bar above"
-      messageTwo="or click on the logo above to reset the filters"
+      message="try searching for your favourite beer using the search bar above"
     />
   );
 

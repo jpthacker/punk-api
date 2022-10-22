@@ -32,16 +32,7 @@ const Pages = (props) => {
           />
         }
       ></Route>
-      <Route
-        path="*"
-        element={
-          <NotFound
-            header={"404 not found"}
-            messageOne={"Oops! Looks like this page is still being brewed"}
-            messageTwo={"Click on the logo above to return to the catalogue"}
-          />
-        }
-      />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
