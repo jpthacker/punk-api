@@ -14,7 +14,7 @@ const Card = (props) => {
         <h4>{tagline.toUpperCase()}</h4>
         <h4 className={styles.abv}>{abv}% ABV</h4>
         <div className={styles.cardButton}>
-          <Button text="Add to Favourites" />
+          <Button text="More Information" />
         </div>
       </section>
     </>

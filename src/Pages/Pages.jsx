@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../components/NotFound";
-import Main from "../containers/Main";
+import Catalogue from "../containers/Catalogue";
 
 const Pages = (props) => {
   const {
@@ -20,7 +20,7 @@ const Pages = (props) => {
       <Route
         path="/"
         element={
-          <Main
+          <Catalogue
             filteredBeers={filteredBeers}
             setBrewedBefore={setBrewedBefore}
             setPh={setPh}

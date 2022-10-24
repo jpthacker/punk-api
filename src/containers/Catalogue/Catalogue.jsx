@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Main.module.scss";
+import styles from "./Catalogue.module.scss";
 import FiltersList from "../../components/FiltersList";
 import CardList from "../../components/CardList";
 import Banner from "../../components/Banner";
 import FeedbackText from "../../components/FeedbackText";
 
-const Main = (props) => {
+const Catalogue = (props) => {
   const {
     filteredBeers,
     setBrewedBefore,
@@ -28,7 +28,7 @@ const Main = (props) => {
 
   return (
     <>
-      <section className={styles.main}>
+      <section className={styles.catalogue}>
         <Banner />
         <FiltersList
           setBrewedBefore={setBrewedBefore}
@@ -45,4 +45,4 @@ const Main = (props) => {
   );
 };
 
-export default Main;
+export default Catalogue;
