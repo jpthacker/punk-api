@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../components/NotFound";
 import Catalogue from "../containers/Catalogue";
+import Beer from "../containers/Beer";
 
 const Pages = (props) => {
   const {
@@ -32,6 +33,7 @@ const Pages = (props) => {
           />
         }
       ></Route>
+      <Route path="beer/:id" element={<Beer />}></Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

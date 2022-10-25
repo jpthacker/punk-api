@@ -25,14 +25,26 @@ const SearchBox = (props) => {
 
   const getSearchList = isOpen ? (
     <div className={styles.searchPopUp}>
-      <SearchList searchedBeers={searchedBeers} beerName={beerName} />
+      <SearchList
+        searchedBeers={searchedBeers}
+        beerName={beerName}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </div>
   ) : (
     ""
   );
 
+  const delayBlurEffect = (e) => {
+    e.stopPropagation();
+    setTimeout(() => {
+      setIsOpen(!isOpen);
+    }, 100);
+  };
+
   return (
-    <div className={styles.search}>
+    <section className={styles.search}>
       <span>{searchIcon}</span>
       <input
         type="text"
@@ -45,12 +57,11 @@ const SearchBox = (props) => {
           setIsOpen(!isOpen);
         }}
         onBlur={(e) => {
-          e.stopPropagation();
-          setIsOpen(!isOpen);
+          delayBlurEffect(e);
         }}
       />
       {getSearchList}
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+.beerInfo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .beerBanner {
+    .imgContainer {
+      img {
+      }
+    }
+  }
+
+  .beerText {
+    .name {
+    }
+    .tagline {
+    }
+    .description {
+    }
+    .beerFigures {
+      .figure {
+      }
+    }
+  }
+}

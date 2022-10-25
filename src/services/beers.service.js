@@ -8,3 +8,12 @@ export const getBeers = (searchParams) => {
     })
     .catch((error) => console.log(error));
 };
+
+export const getBeer = (id) => {
+  return fetch(`${API_URL}/${id}`)
+    .then((res) => res.json())
+    .then((jsonRes) => {
+      return jsonRes[0];
+    })
+    .catch((error) => console.log(error));
+};

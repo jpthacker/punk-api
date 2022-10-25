@@ -4,7 +4,7 @@ import SearchItem from "../SearchItem";
 import { getBeers } from "../../services/beers.service";
 
 const SearchList = (props) => {
-  const { searchedBeers, beerName } = props;
+  const { isOpen, setIsOpen, searchedBeers, beerName } = props;
   const [headliners, setHeadliners] = useState([]);
 
   const getHeadliners = async (ids) => {
@@ -16,7 +16,14 @@ const SearchList = (props) => {
     getHeadliners("ids=2|42|91|106|132|168");
   }, []);
 
-  const getBeersJSX = (beer) => <SearchItem beer={beer} key={beer.id} />;
+  const getBeersJSX = (beer) => (
+    <SearchItem
+      isOpen={isOpen}
+      setIsOpen={setIsOpen}
+      beer={beer}
+      key={beer.id}
+    />
+  );
 
   const headlinersJSX = (
     <section className={styles.searchCards}>
