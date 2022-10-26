@@ -8,7 +8,7 @@ const Card = (props) => {
   return (
     <>
       <section className={styles.beerCard}>
-        <Link to={`beer/${id}`}>
+        <Link to={`beer/${id}`} className={styles.link}>
           <div className={styles.imgContainer}>
             <img src={image_url} alt="beer-img" />
           </div>
