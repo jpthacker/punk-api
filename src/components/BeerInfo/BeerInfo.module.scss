@@ -20,6 +20,9 @@
       font-family: $primary-text;
       font-size: 1.5rem;
       font-weight: $h4-font-weight;
+      width: calc(100% - 3rem);
+      top: calc(100% - 3rem);
+      text-align: right;
     }
 
     .imgContainer {

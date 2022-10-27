@@ -4,10 +4,16 @@ import styles from "./BeerInfo.module.scss";
 const BeerInfo = (props) => {
   const { name, tagline, first_brewed, description, image_url, abv, ibu } =
     props.beer;
+
+  const formatHeader = (header) => {
+    const headerStr = "" + header;
+    return headerStr.toUpperCase();
+  };
+
   return (
     <section className={styles.beerInfo}>
       <div className={styles.beerBanner}>
-        <h4 className={styles.header}>{name}</h4>
+        <h4 className={styles.header}>{formatHeader(name)}</h4>
         <div className={styles.imgContainer}>
           <img src={image_url} alt="beer image" />
         </div>
