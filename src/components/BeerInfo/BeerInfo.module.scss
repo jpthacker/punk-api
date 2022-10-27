@@ -3,24 +3,90 @@
 .beerInfo {
   height: 100%;
   width: 100%;
-  display: flex;
+  max-width: 92rem;
+  max-height: 20rem;
+  margin: 0 auto;
 
   .beerBanner {
+    width: 100%;
+    height: 100%;
+    background-color: $tertiary-color;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+    .header {
+      position: absolute;
+      font-family: $primary-text;
+      font-size: 1.5rem;
+      font-weight: $h4-font-weight;
+    }
+
     .imgContainer {
+      width: 100%;
+      height: 34rem;
+      margin: 0 auto;
+      padding: 2rem;
+
       img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
 
   .beerText {
-    .name {
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
     .tagline {
+      font-family: $secondary-text;
+      font-size: 3.5rem;
+      font-weight: $h2-font-weight;
     }
     .description {
+      font-family: $primary-text;
+      font-weight: $p-font-weight;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+      max-width: 50%;
+      text-align: center;
     }
     .beerFigures {
-      .figure {
+      background-color: $tertiary-color;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      min-width: 50%;
+      padding: 1rem;
+      margin-bottom: 4rem;
+
+      .figureContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+
+        p {
+          font-weight: 600;
+          font-size: 0.8rem;
+          color: $quaternary-color;
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 1.25rem;
+        }
+      }
+
+      span {
+        height: 3rem;
+        width: 0.025rem;
+        background-color: $quaternary-color;
       }
     }
   }
