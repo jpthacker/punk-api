@@ -42,7 +42,7 @@ const SearchBox = (props) => {
     e.stopPropagation();
     setTimeout(() => {
       setIsOpen(!isOpen);
-    }, 100);
+    }, 200);
   };
 
   return (
