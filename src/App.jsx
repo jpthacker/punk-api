@@ -13,6 +13,7 @@ const App = () => {
   const [IBU, setIBU] = useState(0);
   const [minABV, setMinABV] = useState(0);
   const [maxABV, setMaxABV] = useState(55);
+  const [headliners, setHeadliners] = useState([]);
 
   const filterbyBrewDate = `brewed_before=${brewedBefore}`;
   const filterByIBU = `&ibu_gt=${IBU}`;
@@ -32,15 +33,24 @@ const App = () => {
     setFilteredBeers(filterByPh(apiBeers, ph));
   };
 
+  const getHeadliners = async (ids) => {
+    const headlinerBeers = await getBeers(ids);
+    setHeadliners(headlinerBeers);
+  };
+
   useEffect(() => {
     updateFilteredBeers(filters);
   }, [brewedBefore, ph, IBU, minABV, maxABV]);
+
+  useEffect(() => {
+    getHeadliners("ids=2|42|91|106|132|168");
+  }, []);
 
   return (
     <Router>
       <section className={styles.content}>
         <section className={styles.nav}>
-          <NavBar />
+          <NavBar headliners={headliners} />
         </section>
         <section className={styles.main}>
           <Pages

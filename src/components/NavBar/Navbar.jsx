@@ -3,7 +3,7 @@ import styles from "./NavBar.module.scss";
 import SearchBox from "../SearchBox";
 import logo from "../../assets/images/brewdog-logo.jpeg";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getOverlay = isOpen ? <div className={styles.overlay}></div> : "";
@@ -15,7 +15,11 @@ const Navbar = () => {
           <h3>BREWDOG</h3>
           <img className={styles.navImg} src={logo} alt="brewdog logo" />
           <div className={styles.searchBox}>
-            <SearchBox isOpen={isOpen} setIsOpen={setIsOpen} />
+            <SearchBox
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              headliners={props.headliners}
+            />
           </div>
         </div>
         {getOverlay}

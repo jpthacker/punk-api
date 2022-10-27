@@ -4,17 +4,7 @@ import SearchItem from "../SearchItem";
 import { getBeers } from "../../services/beers.service";
 
 const SearchList = (props) => {
-  const { isOpen, setIsOpen, searchedBeers, beerName } = props;
-  const [headliners, setHeadliners] = useState([]);
-
-  const getHeadliners = async (ids) => {
-    const headlinerBeers = await getBeers(ids);
-    setHeadliners(headlinerBeers);
-  };
-
-  useEffect(() => {
-    getHeadliners("ids=2|42|91|106|132|168");
-  }, []);
+  const { isOpen, setIsOpen, searchedBeers, beerName, headliners } = props;
 
   const getBeersJSX = (beer) => (
     <SearchItem

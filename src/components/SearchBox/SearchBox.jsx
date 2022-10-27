@@ -6,8 +6,7 @@ import { getBeers } from "../../services/beers.service";
 import SearchList from "../SearchList";
 
 const SearchBox = (props) => {
-  const { isOpen, setIsOpen } = props;
-  const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
+  const { isOpen, setIsOpen, headliners } = props;
 
   const [searchedBeers, setSearchedBeers] = useState([]);
   const [beerName, setBeerName] = useState();
@@ -18,6 +17,8 @@ const SearchBox = (props) => {
     const apiSearch = await getBeers(searchParams);
     setSearchedBeers(apiSearch);
   };
+
+  const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
   useEffect(() => {
     updateSearch(searchByName);
@@ -30,6 +31,7 @@ const SearchBox = (props) => {
         beerName={beerName}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
+        headliners={headliners}
       />
     </div>
   ) : (
