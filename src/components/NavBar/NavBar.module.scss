@@ -23,18 +23,35 @@ nav {
     text-decoration: none;
     position: relative;
 
-    h3 {
-      font-size: 2.5rem;
-      font-family: $secondary-text;
+    .link1 {
+      height: 4rem;
+      width: 9rem;
+      padding: 0.25rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .navLogoText {
+        object-fit: contain;
+        height: 2.5rem;
+      }
     }
 
-    .navImg {
-      object-fit: contain;
-      height: 2.5rem;
-      width: 2.5rem;
+    .link2 {
+      height: 4rem;
+      width: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
+
+      .navLogoImg {
+        object-fit: contain;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
     }
   }
 
