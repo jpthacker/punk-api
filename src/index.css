@@ -25,7 +25,13 @@ code {
 }
 
 @font-face {
-  font-family: "Heading Pro";
-  src: local("Heading Pro"),
-   url("../src/assets/fonts/heading-pro-5.ttf") format("ttf");
+  font-family: "Antonio Bold";
+  src: local("Antonio Bold"),
+   url("../src/assets/fonts/Antonio-Bold.ttf") format("ttf");
   }
+
+  @font-face {
+    font-family: "Antonio Regular";
+    src: local("Antonio Regular"),
+     url("../src/assets/fonts/Antonio-Regular.ttf") format("ttf");
+    }
