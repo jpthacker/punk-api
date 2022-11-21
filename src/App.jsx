@@ -47,7 +47,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={"/punk-api"}>
       <section className={styles.content}>
         <section className={styles.nav}>
           <NavBar headliners={headliners} />
