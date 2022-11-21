@@ -2,6 +2,10 @@
 
 > _A website built with React that uses the 'Punk API' to display Brewdog's back catalogue of beers. This application displays the full range of beers and allows the user to easily search and filter by selected criterias and names._ </br>
 
+##
+
+![punk-api app design](./src//assets/images/app-home-screenshot.jpg)
+
 #### Available Scripts
 
 In the project directory, you can run:
