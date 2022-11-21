@@ -1,7 +1,6 @@
 {
   "name": "punk-api",
   "version": "0.1.0",
-  "homepage": "https://jpthacker.github.io/punk-api",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
