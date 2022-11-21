@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Brewdog 'Punk Api' React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> _A website built with React that uses the 'Punk API' to display Brewdog's back catalogue of beers. This application displays the full range of beers and allows the user to easily search and filter by selected criterias and names._ </br>
 
-## Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
 
