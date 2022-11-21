@@ -47,7 +47,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <section className={styles.content}>
         <section className={styles.nav}>
           <NavBar headliners={headliners} />
